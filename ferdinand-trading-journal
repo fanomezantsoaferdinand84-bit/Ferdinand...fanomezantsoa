@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Journal</title>
+
+<style>
+
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+/* ===== BODY ===== */
+body{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    background:#111827;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+nav h1{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== TITLE ===== */
+.title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.title h2{
+    font-size:35px;
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+/* ===== FORM ===== */
+form{
+    display:grid;
+    gap:15px;
+}
+
+input, select{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#334155;
+    color:white;
+}
+
+button{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#38bdf8;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+    background:#0ea5e9;
+}
+
+/* ===== TABLE ===== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th,
+table td{
+    border:1px solid #334155;
+    padding:12px;
+    text-align:center;
+}
+
+table th{
+    background:#0f172a;
+    color:#38bdf8;
+}
+
+.profit{
+    color:lime;
+    font-weight:bold;
+}
+
+.loss{
+    color:red;
+    font-weight:bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:700px){
+
+    table{
+        font-size:12px;
+    }
+
+    .title h2{
+        font-size:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+    <h1>Trading Journal</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Trades</a></li>
+        <li><a href="#">Stats</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<div class="container">
+
+    <!-- TITLE -->
+    <div class="title">
+        <h2>Trading Journal 📈</h2>
+        <p>Track your trades and improve your strategy</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="card">
+
+        <form>
+
+            <input type="date">
+
+            <select>
+                <option>XAUUSD</option>
+                <option>BTCUSD</option>
+                <option>EURUSD</option>
+            </select>
+
+            <select>
+                <option>BUY</option>
+                <option>SELL</option>
+            </select>
+
+            <input type="number" placeholder="Entry Price">
+
+            <input type="number" placeholder="Take Profit">
+
+            <input type="number" placeholder="Stop Loss">
+
+            <input type="number" placeholder="Profit / Loss">
+
+            <button type="submit">
+                Add Trade
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="card">
+
+        <h3>Trade History</h3>
+
+        <table>
+
+            <tr>
+                <th>Date</th>
+                <th>Pair</th>
+                <th>Type</th>
+                <th>Result</th>
+            </tr>
+
+            <tr>
+                <td>2026-05-23</td>
+                <td>XAUUSD</td>
+                <td>BUY</td>
+                <td class="profit">+$120</td>
+            </tr>
+
+            <tr>
+                <td>2026-05-22</td>
+                <td>BTCUSD</td>
+                <td>SELL</td>
+                <td class="loss">-$45</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
