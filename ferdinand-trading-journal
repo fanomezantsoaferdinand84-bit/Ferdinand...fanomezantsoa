@@ -1,212 +1,60 @@
-<!DOCTYPE html>
-<html lang="mg">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trading Journal</title>
+<!DOCTYPE >html
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-<style>
-
-/* ===== RESET ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial;
-}
-
-/* ===== BODY ===== */
-body{
-    background:#0f172a;
-    color:white;
-    min-height:100vh;
-}
-
-/* ===== NAVBAR ===== */
-nav{
-    background:#111827;
-    padding:15px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.5);
-}
-
-nav h1{
-    color:#38bdf8;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:20px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#38bdf8;
-}
-
-/* ===== CONTAINER ===== */
-.container{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
-}
-
-/* ===== CARD ===== */
-.card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
-
-/* ===== TITLE ===== */
-.title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.title h2{
-    font-size:35px;
-    margin-bottom:10px;
-    color:#38bdf8;
-}
-
-/* ===== FORM ===== */
-form{
-    display:grid;
-    gap:15px;
-}
-
-input, select{
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#334155;
-    color:white;
-}
-
-button{
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#38bdf8;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.03);
-    background:#0ea5e9;
-}
-
-/* ===== TABLE ===== */
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-
-table th,
-table td{
-    border:1px solid #334155;
-    padding:12px;
-    text-align:center;
-}
-
-table th{
-    background:#0f172a;
-    color:#38bdf8;
-}
-
-.profit{
-    color:lime;
-    font-weight:bold;
-}
-
-.loss{
-    color:red;
-    font-weight:bold;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:700px){
-
-    table{
-        font-size:12px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
-    .title h2{
-        font-size:25px;
-    }
-
-}
-
-</style>
+  </style>
 </head>
-
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav>
+  <header>
     <h1>Trading Journal</h1>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Trades</a></li>
-        <li><a href="#">Stats</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Trades</a>
+      <a href="#">Strategy</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<!-- ===== MAIN ===== -->
-<div class="container">
+  <section class="hero">
+    <h2>Track Your Trades 📈</h2>
+    <p>Improve your trading strategy and manage your performance.</p>
 
-    <!-- TITLE -->
-    <div class="title">
-        <h2>Trading Journal 📈</h2>
-        <p>Track your trades and improve your strategy</p>
+    <a href="#" class="btn">Start Now</a>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Trade History</h3>
+      <p>Save all your trades and review your progress.</p>
     </div>
 
-    <!-- FORM -->
     <div class="card">
+      <h3>Risk Management</h3>
+      <p>Analyze risk and improve your discipline.</p>
+    </div>
 
-        <form>
+    <div class="card">
+      <h3>Trading Strategy</h3>
+      <p>Create and test your own trading strategies.</p>
+    </div>
+  </section>
 
-            <input type="date">
+  <footer>
+    <p>© 2025 Trading Journal | Made with HTML & CSS</p>
+  </footer>
 
-            <select>
-                <option>XAUUSD</option>
-                <option>BTCUSD</option>
-                <option>EURUSD</option>
-            </select>
-
-            <select>
-                <option>BUY</option>
-                <option>SELL</option>
-            </select>
-
-            <input type="number" placeholder="Entry Price">
-
-            <input type="number" placeholder="Take Profit">
-
-            <input type="number" placeholder="Stop Loss">
-
-            <input type="number" placeholder="Profit / Loss">
-
+</body>
+</html>
             <button type="submit">
                 Add Trade
             </button>
